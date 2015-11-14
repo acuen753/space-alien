@@ -82,8 +82,8 @@ selection-color: rgb(0, 255, 0);
    <widget class="QCheckBox" name="cbSound">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>411</y>
+      <x>300</x>
+      <y>410</y>
       <width>70</width>
       <height>17</height>
      </rect>
@@ -364,6 +364,19 @@ selection-color: rgb(0, 255, 0);
      <string>networkPlayer</string>
     </property>
    </widget>
+   <widget class="QCheckBox" name="cbCheatMode">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>410</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cheat Mode</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -371,7 +384,7 @@ selection-color: rgb(0, 255, 0);
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>27</height>
     </rect>
    </property>
   </widget>

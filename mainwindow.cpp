@@ -280,6 +280,7 @@ void MainWindow::hideGUI()
     ui->lblTitle->hide();
     ui->btnPlay->hide();
     ui->cbSound->hide();
+    ui->cbCheatMode->hide();
     ui->lblSpaceship2->hide();
     ui->lblSpaceship3->hide();
     ui->lblSpaceship4->hide();
@@ -677,6 +678,8 @@ void MainWindow::timerHit()
 
             //Collision
             //2D unit collision algorithm from: https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+          if (!(ui->cbCheatMode->isChecked()))
+          {
             for (int i = 0; i < objList.size(); i++)
             {
                 Enemy *test = dynamic_cast<Enemy *>(objList[i]);
@@ -713,8 +716,8 @@ void MainWindow::timerHit()
                          QApplication::quit();
                      }
                  }
-            }
-
+            }//collision
+          }
         }
         if (Game::instance()->getUntrackedShots() > 0)
         {
