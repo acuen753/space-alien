@@ -14,7 +14,6 @@
 #include <QTransform>
 #include <QMatrix>
 #include <QMessageBox>
-#include <QSound>
 
 #include "player.h"
 #include "alien.h"
@@ -62,9 +61,10 @@ public:
     bool noEnemiesLeft();
     void advanceLevel();
     void hideGUI();
+    void showGUI();
     QString shipSelect();
 
-    void sendGameData();
+    void sendGameData(QTcpSocket *sock);
 
 private slots:
     void timerHit();
@@ -102,7 +102,7 @@ public:
         offsetX = 0;
         offsetY = 0;
     }
-    void playerGen(QPixmap pixmap);
+    void playerGen();
 
     int getOffsetX() { return offsetX; }
     int getOffsetY() { return offsetY; }

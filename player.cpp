@@ -1,10 +1,4 @@
-﻿#include <math.h>
-
-#include "player.h"
-
-#include <QDebug>
-#include <QtMath>
-#include <string>
+﻿#include "player.h"
 
 using namespace std;
 
@@ -23,6 +17,8 @@ string Player::getSave()
     result += to_string(angle);
     result += ",";
     result += peerName.toStdString();
+    result += ",";
+    result += pixmapName.toStdString();
     result += "\n";
     return result;
 }
